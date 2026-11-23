@@ -16,9 +16,11 @@ def dialect_vad_silence_ms(dialect: str = "neutral") -> int:
     """Return a dialect-adjusted, range-safe trailing-silence interval."""
     configured = os.getenv("VAD_SILENCE_MS")
     try:
-        silence = int(configured) if configured is not None else DIALECT_VAD_MS.get(dialect.lower(), 800)
+        base = int(configured) if configured is not None else 800
     except (TypeError, ValueError):
-        silence = DIALECT_VAD_MS.get(dialect.lower(), 800)
+        base = 800
+    dialect_offset = DIALECT_VAD_MS.get(dialect.lower(), 800) - 800
+    silence = base + dialect_offset
     return max(500, min(2500, silence))
 
 

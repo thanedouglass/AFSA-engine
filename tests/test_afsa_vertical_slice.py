@@ -30,6 +30,7 @@ def test_offline_classifier_is_deterministic(monkeypatch):
 def test_worker_runner_and_vad_bounds(monkeypatch):
     monkeypatch.setenv("VAD_SILENCE_MS", "300")
     assert dialect_vad_silence_ms("neutral") == 500
+    monkeypatch.setenv("VAD_SILENCE_MS", "800")
     worker = PipelineWorker(dialect="british")
     assert worker.vad_silence_ms == 850
     runner = WorkerRunner(worker)
