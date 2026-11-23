@@ -1,0 +1,11 @@
+requirement_id,requirement,implementation,test
+R1,Repository scaffold,README/pyproject/package layout,test_afsa_vertical_slice
+R2,Ryan et al. 2005 scope and continuum framing,README.md and PRD.md,test_afsa_vertical_slice
+R3,Privacy stance and ephemeral purge,session.py,test_afsa_vertical_slice
+R4,Error-bound payload types,schemas.py,test_afsa_vertical_slice
+R5,CAS continuum payload,schemas.py,test_afsa_vertical_slice
+R6,CPD continuum payload,schemas.py,test_afsa_vertical_slice
+R7,AICL and somatic payload,schemas.py,test_afsa_vertical_slice
+R8,Google GenAI and offline classifier,classifier.py,test_afsa_vertical_slice
+R9,Dialect-aware VAD with safe bounds,pipeline.py,test_afsa_vertical_slice
+R10,Worker lifecycle runner,pipeline.py,test_afsa_vertical_slice
