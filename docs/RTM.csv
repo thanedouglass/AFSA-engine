@@ -1,11 +1,11 @@
-requirement_id,requirement,implementation,test
-R1,Repository scaffold,README/pyproject/package layout,test_afsa_vertical_slice
-R2,Ryan et al. 2005 scope and continuum framing,README.md and PRD.md,test_afsa_vertical_slice
-R3,Privacy stance and ephemeral purge,session.py,test_afsa_vertical_slice
-R4,Error-bound payload types,schemas.py,test_afsa_vertical_slice
-R5,CAS continuum payload,schemas.py,test_afsa_vertical_slice
-R6,CPD continuum payload,schemas.py,test_afsa_vertical_slice
-R7,AICL and somatic payload,schemas.py,test_afsa_vertical_slice
-R8,Google GenAI and offline classifier,classifier.py,test_afsa_vertical_slice
-R9,Dialect-aware VAD with safe bounds,pipeline.py,test_afsa_vertical_slice
-R10,Worker lifecycle runner,pipeline.py,test_afsa_vertical_slice
+Requirement ID,Category,Description,Edge Case / Risk Addressed,Audit & Mathematical Mapping
+REQ-ACC-01,Domain Model,"Measure acculturation across fluid, multi-dimensional continua (Ryan et al., 2005: CAS, CPD, AICL).","Deficit model bias; forced assimilation assumptions; unrelated psychometric/youth-probe drift.","Best Practice #5 & #7; Multi-Continua Engine"
+REQ-VCE-01,Interface,"Headless ambient hardware engine (Pipecat PipelineWorker + WorkerRunner) with optional 2D gradient cosine wave visual.","Visual distraction; avatar anthropomorphization; clinical evaluation anxiety.","Minimalist Spec; Hardware Mirror Stance"
+REQ-VCE-02,Acoustic VAD,"Adaptive Voice Activity Detection with configurable dialectal pause buffers (500ms-2500ms).","Edge Case #1 & #8: Dialectal pauses/hesitations misinterpreted as cognitive delays or premature turn cuts.","Dynamic VAD Layer (VAD_SILENCE_MS)"
+REQ-MEM-01,Architecture,"SoftMemoryContext protocol (Phase 1 no-op) scaling to Memorilla MemoryModule generating 16 soft memory tokens (m_k) in Phase 3.","Edge Case #5: Base encoder tokenization bias penalizing non-standard AAE phonology/syntax.","Soft Token Injection (m_k in R^{h_L})"
+REQ-SOM-01,Telemetry,"Client-side somatic telemetry: AirPods CoreMotion IMU jaw-clench kinematics + optional WASM rPPG BVP/HRV and micro-facial EMG proxies.","Edge Case #2: Neurodivergent vocal masking hiding somatic stress; webcam occlusion/lighting failure.","CoreMotion Bridge + Client-Side Vision Airlock"
+REQ-RBO-01,Statistics,"Rao-Blackwellized estimator conditioning raw prosody on somatic sufficient statistics (T).","Edge Case #4: Circadian/physical exhaustion (eta) flagged as cognitive decline or stress anomaly.","theta_tilde = E[theta_hat | T]; Variance Reduction Theorem"
+REQ-DEC-01,Decision Core,"Deploy GoogleGenAIClassifier (gemini-decision-1: Noul, Choice, Score) for zero-output-token parallel scoring of CAS/CPD/AICL, plus deterministic offline mock fallback.","Edge Case #3: Generative drift, hallucinated severity scores, or blocked local testing without API keys.","LangChain Runnable Integration; LangSmith Traced Decisions"
+REQ-IND-01,Interaction,"Minimalist disarming prompt induction (""Hey love"") over ambient mirror stance.","Edge Case #2 & #3: User hyper-correcting or performing corporate masking for an AI evaluator.","Observer-Effect Mitigation"
+REQ-VAR-01,Diagnostics,"Compute explicit confidence bounds, hardware jitter, and error margins for every output vector.","Edge Case #3: Low-bitrate codec compression or microphone noise flagged as vocal tremors.","Best Practice #6; Noise Margin Output"
+REQ-PRIV-01,Sovereignty,"Enforce client-side telemetry processing, ephemeral in-memory session state, explicit purge_session() wipe, and zero raw audio/video/PII persistence.","Edge Case #7: Opaque background surveillance, persistent logging, and data harvesting.","Best Practice #3 & Defensive Firewall (purge_session())"
