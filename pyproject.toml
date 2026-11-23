@@ -7,19 +7,26 @@ name = "afsa-engine"
 version = "0.1.0"
 description = "Privacy-preserving AFSA conversational assessment vertical slice"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
   "pipecat-ai",
   "langchain",
   "langchain-google-genai>=4.5.0",
   "google-genai>=3.2.0",
+  "pydantic",
+  "pytest",
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
+test = [
+  "pytest>=8",
+  "pytest-asyncio",
+]
 
 [tool.setuptools.packages.find]
 include = ["afsa*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_default_fixture_loop_scope = "function"
